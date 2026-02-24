@@ -1,0 +1,32 @@
+@import url("https://use.typekit.net/uhw3wlz.css");
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@import "./spacing.css";
+
+@theme {
+  --font-sans: 'futura-pt', ui-sans-serif, system-ui, sans-serif;
+  --font-bold: 'futura-pt-bold', ui-sans-serif, system-ui, sans-serif;
+
+  /* Colors */
+  --color-teal: #00828D;
+  --color-granite: #4D4E57;
+  --color-sand: #F5EFED;
+  --color-lime: #C6C013;
+
+  /* Font Scale */
+  --text-xxs: 16px;
+  --text-xs: 18px;
+  --text-sm: 20px;
+  --text-md: 24px;
+  --text-lg: 26px;
+  --text-xl: 30px;
+  --text-2xl: 50px;
+  --text-3xl: 70px;
+
+  --max-width-container: 100rem;
+}

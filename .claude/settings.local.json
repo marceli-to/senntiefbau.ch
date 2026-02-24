@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build)",
+      "Bash(/Applications/Herd.app/Contents/Resources/herd/bin/herd link senntiefbau-ch --path=/Users/marceli.to/Jamon.digital/Webroot/senntiefbau.ch/dist 2>/dev/null || /opt/homebrew/bin/herd link senntiefbau-ch --path=/Users/marceli.to/Jamon.digital/Webroot/senntiefbau.ch/dist 2>/dev/null || echo \"HERD_CLI_NOT_FOUND\")",
+      "Bash(\"$HOME/Library/Application Support/Herd/bin/herd\" link senntiefbau-ch --path=/Users/marceli.to/Jamon.digital/Webroot/senntiefbau.ch/dist)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://senntiefbau-ch.test/ 2>/dev/null; echo \"\")",
+      "Bash(cd /Users/marceli.to/Jamon.digital/Webroot/senntiefbau.ch/dist && \"$HOME/Library/Application Support/Herd/bin/herd\" link senntiefbau-ch)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://senntiefbau-ch.test/)",
+      "Bash(\"$HOME/Library/Application Support/Herd/bin/herd\" unlink senntiefbau-ch)",
+      "Bash(\"$HOME/Library/Application Support/Herd/bin/herd\" link senntiefbau.ch && \"$HOME/Library/Application Support/Herd/bin/herd\" secure senntiefbau.ch)",
+      "Bash(curl -sk -o /dev/null -w \"%{http_code}\" https://senntiefbau.ch.test/)",
+      "Bash(php -v && composer --version 2>/dev/null)",
+      "Bash(composer create-project laravel/laravel temp-laravel 2>&1 | tail -20)",
+      "Bash(cp -a /Users/marceli.to/Jamon.digital/Webroot/senntiefbau.ch/temp-laravel/. /Users/marceli.to/Jamon.digital/Webroot/senntiefbau.ch/ && rm -rf /Users/marceli.to/Jamon.digital/Webroot/senntiefbau.ch/temp-laravel)",
+      "Bash(php /Users/marceli.to/Jamon.digital/Webroot/senntiefbau.ch/artisan --version)",
+      "Bash(npm install alpinejs 2>&1 | tail -5)",
+      "Bash(php /Users/marceli.to/Jamon.digital/Webroot/senntiefbau.ch/artisan route:list 2>&1)"
+    ]
+  }
+}
