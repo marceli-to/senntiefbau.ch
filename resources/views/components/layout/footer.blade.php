@@ -1,4 +1,4 @@
-<footer class="bg-granite text-white text-xxs md:text-xs lg:text-sm px-40 pb-60 pt-20">
+<footer class="bg-granite text-white text-xxs md:text-xs lg:text-sm px-40 pb-60">
   <x-layout.container>
     <div class="flex flex-col gap-y-20 md:grid md:grid-cols-12 md:gap-y-0 md:gap-x-20">
       <div class="md:col-span-3">
