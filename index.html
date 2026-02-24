@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Senn Tiefbau AG – Tiefbau, Rückbau & Spezialarbeiten</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Navigation -->
+    <header
+      x-data="{ open: false, scrolled: false }"
+      x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 40 })"
+      :class="scrolled ? 'bg-white shadow-sm' : 'bg-transparent'"
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+    >
+      <div class="max-w-6xl mx-auto px-5 flex items-center justify-between h-16 md:h-20">
+
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2 shrink-0">
+          <span :class="scrolled ? 'text-[#1a5c5c]' : 'text-white'" class="font-['Bebas_Neue'] text-2xl tracking-widest transition-colors duration-300">SENN TIEFBAU AG</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#leistungen" :class="scrolled ? 'text-stone-700 hover:text-[#1a5c5c]' : 'text-white/80 hover:text-white'" class="text-sm font-medium tracking-widest uppercase transition-colors duration-200">Leistungen</a>
+          <a href="#team" :class="scrolled ? 'text-stone-700 hover:text-[#1a5c5c]' : 'text-white/80 hover:text-white'" class="text-sm font-medium tracking-widest uppercase transition-colors duration-200">Team</a>
+          <a href="#kontakt" :class="scrolled ? 'bg-[#1a5c5c] text-white' : 'bg-white text-[#1a5c5c]'" class="text-sm font-medium tracking-widest uppercase px-5 py-2 transition-colors duration-200">Kontakt</a>
+        </nav>
+
+        <!-- Hamburger -->
+        <button
+          @click="open = !open"
+          class="md:hidden flex flex-col gap-1.5 p-1 z-50"
+          aria-label="Menü öffnen"
+        >
+          <span :class="scrolled ? 'bg-stone-800' : 'bg-white'" class="block w-6 h-px transition-all duration-300" :style="open ? 'transform: translateY(5px) rotate(45deg)' : ''"></span>
+          <span :class="[scrolled ? 'bg-stone-800' : 'bg-white', open ? 'opacity-0' : 'opacity-100']" class="block w-6 h-px transition-all duration-300"></span>
+          <span :class="scrolled ? 'bg-stone-800' : 'bg-white'" class="block w-6 h-px transition-all duration-300" :style="open ? 'transform: translateY(-5px) rotate(-45deg)' : ''"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        x-show="open"
+        x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0 -translate-y-2"
+        x-transition:enter-end="opacity-100 translate-y-0"
+        x-transition:leave="transition ease-in duration-150"
+        x-transition:leave-start="opacity-100 translate-y-0"
+        x-transition:leave-end="opacity-0 -translate-y-2"
+        class="md:hidden bg-white border-t border-stone-100 px-5 py-6 flex flex-col gap-5"
+      >
+        <a @click="open = false" href="#leistungen" class="text-stone-700 text-sm font-medium tracking-widest uppercase">Leistungen</a>
+        <a @click="open = false" href="#team" class="text-stone-700 text-sm font-medium tracking-widest uppercase">Team</a>
+        <a @click="open = false" href="#kontakt" class="text-sm font-medium tracking-widest uppercase bg-[#1a5c5c] text-white px-5 py-3 text-center">Kontakt</a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#1a5c5c]">
+
+      <!-- Geometric background texture -->
+      <div class="absolute inset-0 opacity-10">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+              <path d="M 60 0 L 0 0 0 60" fill="none" stroke="white" stroke-width="0.5"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+      </div>
+
+      <!-- Diagonal accent -->
+      <div class="absolute bottom-0 right-0 w-1/2 h-full bg-[#2A8F90]/20 clip-diagonal hidden md:block"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 text-center px-5 max-w-5xl mx-auto">
+        <p class="text-white/50 text-xs tracking-[0.3em] uppercase mb-8 font-['DM_Sans']">Tiefbau · Rückbau · Spezialarbeiten</p>
+        <h1 class="font-['Bebas_Neue'] text-white leading-none tracking-wider">
+          <span class="block text-[clamp(3rem,12vw,9rem)]">WIR SCHAFFEN</span>
+          <span class="block text-[clamp(3rem,12vw,9rem)]">PLATZ FÜR NEUES.</span>
+          <span class="block text-[clamp(2rem,7vw,5.5rem)] text-[#7ecece] mt-2">UND SICHERN, WAS BLEIBT.</span>
+        </h1>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#leistungen" class="bg-white text-[#1a5c5c] font-['DM_Sans'] font-medium text-sm tracking-widest uppercase px-8 py-4 hover:bg-[#7ecece] hover:text-white transition-colors duration-200">Leistungen entdecken</a>
+          <a href="#kontakt" class="border border-white/40 text-white font-['DM_Sans'] font-medium text-sm tracking-widest uppercase px-8 py-4 hover:bg-white/10 transition-colors duration-200">Kontakt aufnehmen</a>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30">
+        <span class="text-[10px] tracking-[0.25em] uppercase font-['DM_Sans']">Scrollen</span>
+        <div class="w-px h-10 bg-gradient-to-b from-white/30 to-transparent animate-pulse"></div>
+      </div>
+    </section>
+
+    <!-- Leistungen -->
+    <section id="leistungen" class="py-20 md:py-32 bg-white">
+      <div class="max-w-6xl mx-auto px-5">
+
+        <!-- Section header -->
+        <div class="text-center mb-14 md:mb-20">
+          <p class="text-[#2A8F90] text-xs tracking-[0.3em] uppercase font-['DM_Sans'] mb-3">Was wir tun</p>
+          <h2 class="font-['Bebas_Neue'] text-[clamp(2.5rem,6vw,4rem)] text-stone-900 tracking-wider">Arbeit im Tiefgang</h2>
+          <div class="w-12 h-px bg-[#2A8F90] mx-auto mt-5 mb-8"></div>
+          <p class="max-w-2xl mx-auto text-stone-500 font-['DM_Sans'] text-base leading-relaxed">
+            Mit Erfahrung, Präzision und moderner Ausrüstung setzen wir Projekte im Tiefbau, Rückbau und Spezialbereich zuverlässig um. Wir realisieren Aushub-, Leitungs- und Abbrucharbeiten ebenso sorgfältig wie Umgebungs- und Wasserbauprojekte und bieten Lösungen, die auf jede Baustelle und jede Situation abgestimmt sind. Dank handwerklichem Know-how und effizienter Arbeitsweise schaffen wir sichere Ergebnisse und echten Mehrwert für private wie gewerbliche Kunden.
+          </p>
+        </div>
+
+        <!-- Service cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+
+          <!-- Leitungsbau -->
+          <div class="group flex flex-col items-center text-center p-8 border border-stone-100 hover:border-[#2A8F90]/30 hover:shadow-lg transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-[#2A8F90] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="13" width="24" height="6" rx="3" stroke="white" stroke-width="1.5"/>
+                <circle cx="9" cy="16" r="2" fill="white"/>
+                <circle cx="23" cy="16" r="2" fill="white"/>
+                <path d="M4 16 H1M31 16 H28" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="font-['Bebas_Neue'] text-xl tracking-widest text-stone-900 mb-3">Leitungsbau</h3>
+            <p class="text-stone-500 font-['DM_Sans'] text-sm leading-relaxed">Kanalisation, Drainagen und Werkleitungen, sauber ausgeführt von der Planung bis zur Umsetzung.</p>
+          </div>
+
+          <!-- Rückbau / Aushub -->
+          <div class="group flex flex-col items-center text-center p-8 border border-stone-100 hover:border-[#2A8F90]/30 hover:shadow-lg transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-[#2A8F90] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="20" width="26" height="4" rx="1" stroke="white" stroke-width="1.5"/>
+                <path d="M8 20V16l4-4h6l2 2v6" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+                <circle cx="10" cy="24" r="2" stroke="white" stroke-width="1.5"/>
+                <circle cx="22" cy="24" r="2" stroke="white" stroke-width="1.5"/>
+                <path d="M20 12 L26 8 L28 12" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="font-['Bebas_Neue'] text-xl tracking-widest text-stone-900 mb-3">Rückbau / Aushub</h3>
+            <p class="text-stone-500 font-['DM_Sans'] text-sm leading-relaxed">Abbruch und Rückbau, Kernbohrungen, Aushub, präzise, sicher und zuverlässig.</p>
+          </div>
+
+          <!-- Umgebungsarbeiten -->
+          <div class="group flex flex-col items-center text-center p-8 border border-stone-100 hover:border-[#2A8F90]/30 hover:shadow-lg transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-[#2A8F90] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="4" width="10" height="10" rx="1" stroke="white" stroke-width="1.5"/>
+                <rect x="18" y="4" width="10" height="10" rx="1" stroke="white" stroke-width="1.5"/>
+                <rect x="4" y="18" width="10" height="10" rx="1" stroke="white" stroke-width="1.5"/>
+                <rect x="18" y="18" width="10" height="10" rx="1" stroke="white" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3 class="font-['Bebas_Neue'] text-xl tracking-widest text-stone-900 mb-3">Umgebungsarbeiten</h3>
+            <p class="text-stone-500 font-['DM_Sans'] text-sm leading-relaxed">Verbundsteine, Steinmauern und diverse Beläge für langlebige und funktionale Aussenbereiche.</p>
+          </div>
+
+          <!-- Spezial Arbeiten -->
+          <div class="group flex flex-col items-center text-center p-8 border border-stone-100 hover:border-[#2A8F90]/30 hover:shadow-lg transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-[#2A8F90] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 26 L12 14 L20 18 L28 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 26 H28" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="20" cy="10" r="3" stroke="white" stroke-width="1.5"/>
+                <path d="M20 13 V16" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="font-['Bebas_Neue'] text-xl tracking-widest text-stone-900 mb-3">Spezial Arbeiten</h3>
+            <p class="text-stone-500 font-['DM_Sans'] text-sm leading-relaxed">Hangsicherungen, Quellfassungen, Baurodung, Wasserbau sowie Vermietung eines Maschinisten mit Bagger.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="py-20 md:py-32 bg-[#F2EDE8]">
+      <div class="max-w-6xl mx-auto px-5">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-start">
+
+          <!-- Text -->
+          <div>
+            <p class="text-[#2A8F90] text-xs tracking-[0.3em] uppercase font-['DM_Sans'] mb-3">Die Menschen dahinter</p>
+            <h2 class="font-['Bebas_Neue'] text-[clamp(2.5rem,6vw,4rem)] text-stone-900 tracking-wider mb-2">Team</h2>
+            <div class="w-12 h-px bg-[#2A8F90] mb-8"></div>
+            <div class="space-y-5 text-stone-600 font-['DM_Sans'] text-base leading-relaxed">
+              <p>Als gelernter Zimmermann und Bodenleger habe ich das Bauhandwerk von Grund auf erlernt und später meine Begeisterung für den Tiefbau entdeckt. In einem auf Schreitbagger spezialisierten Betrieb im Kanton Zug konnte ich mein technisches Verständnis vertiefen und meinen Blick für präzise Spezialarbeiten schärfen.</p>
+              <p>Später sammelte ich Erfahrung in der Geschäftsleitung eines Tiefbauunternehmens und machte danach den Schritt in die Selbständigkeit. Heute kombiniere ich handwerkliches Können, Erfahrung und unternehmerisches Denken, um meinen Kunden professionelle Lösungen im Tiefbau, Rückbau, Aushub, Leitungsbau und bei Spezialarbeiten zu bieten.</p>
+            </div>
+          </div>
+
+          <!-- Team members -->
+          <div class="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-8">
+
+            <!-- Benj Senn -->
+            <div class="flex-1 flex flex-col items-center text-center">
+              <div class="w-32 h-32 rounded-full bg-[#2A8F90]/15 border-2 border-[#2A8F90]/20 flex items-center justify-center mb-4 overflow-hidden">
+                <span class="font-['Bebas_Neue'] text-5xl text-[#2A8F90]">B</span>
+              </div>
+              <h3 class="font-['Bebas_Neue'] text-xl tracking-widest text-[#2A8F90]">Benj Senn</h3>
+              <p class="text-stone-500 font-['DM_Sans'] text-sm mt-1">Geschäftsführer</p>
+            </div>
+
+            <!-- Irene Senn -->
+            <div class="flex-1 flex flex-col items-center text-center">
+              <div class="w-32 h-32 rounded-full bg-[#2A8F90]/15 border-2 border-[#2A8F90]/20 flex items-center justify-center mb-4 overflow-hidden">
+                <span class="font-['Bebas_Neue'] text-5xl text-[#2A8F90]">I</span>
+              </div>
+              <h3 class="font-['Bebas_Neue'] text-xl tracking-widest text-[#2A8F90]">Irene Senn</h3>
+              <p class="text-stone-500 font-['DM_Sans'] text-sm mt-1">Kreditoren / Buchhaltung</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer / Kontakt -->
+    <footer id="kontakt" class="bg-stone-900 text-white py-16 md:py-20">
+      <div class="max-w-6xl mx-auto px-5">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 pb-12 border-b border-white/10">
+
+          <!-- Brand -->
+          <div>
+            <span class="font-['Bebas_Neue'] text-2xl tracking-widest text-white block mb-3">Senn Tiefbau AG</span>
+            <p class="text-white/40 font-['DM_Sans'] text-sm leading-relaxed max-w-xs">Wir schaffen Platz für Neues. Und sichern, was bleibt.</p>
+          </div>
+
+          <!-- Address -->
+          <div>
+            <h4 class="font-['Bebas_Neue'] text-base tracking-widest text-white/60 mb-4">Kontakt</h4>
+            <address class="not-italic text-white/70 font-['DM_Sans'] text-sm leading-loose">
+              Schärlibachstrasse 10<br>
+              8374 Dussnang<br>
+              <a href="tel:0719771000" class="hover:text-white transition-colors duration-200">071 977 10 00</a><br>
+              <a href="mailto:info@senntiefbau.ch" class="hover:text-white transition-colors duration-200">info@senntiefbau.ch</a>
+            </address>
+          </div>
+
+          <!-- Links -->
+          <div>
+            <h4 class="font-['Bebas_Neue'] text-base tracking-widest text-white/60 mb-4">Rechtliches</h4>
+            <nav class="flex flex-col gap-2">
+              <a href="#" class="text-white/50 font-['DM_Sans'] text-sm hover:text-white transition-colors duration-200">Impressum</a>
+              <a href="#" class="text-white/50 font-['DM_Sans'] text-sm hover:text-white transition-colors duration-200">Datenschutz</a>
+            </nav>
+          </div>
+
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <p class="text-white/25 font-['DM_Sans'] text-xs">© 2025 Senn Tiefbau AG. Alle Rechte vorbehalten.</p>
+          <p class="text-white/25 font-['DM_Sans'] text-xs">design by stoz</p>
+        </div>
+
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
