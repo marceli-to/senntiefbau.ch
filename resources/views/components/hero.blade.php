@@ -1,4 +1,4 @@
-<section class="relative">
+<section class="relative" aria-label="Titelbild">
   <picture>
     <source
       type="image/avif"
@@ -12,16 +12,16 @@
       type="image/jpeg"
       srcset="/img/senntiefbau-visual-480w.jpg 480w, /img/senntiefbau-visual-768w.jpg 768w, /img/senntiefbau-visual-1024w.jpg 1024w, /img/senntiefbau-visual-1440w.jpg 1440w"
       sizes="100vw" />
-    <img src="/img/senntiefbau-visual-1024w.jpg" alt="" class="w-full h-auto aspect-[2/2.5] sm:aspect-[16/9] md:aspect-[16/8] xl:aspect-[16/7] object-cover" />
+    <img src="/img/senntiefbau-visual-1024w.jpg" alt="Bagger bei Tiefbauarbeiten auf einer Baustelle" class="w-full h-auto aspect-[2/2.5] sm:aspect-[16/9] md:aspect-[16/8] xl:aspect-[16/7] object-cover" fetchpriority="high" />
   </picture>
 
   <div class="absolute inset-0 bg-black/30 flex items-end">
     <x-layout.container class="w-full pb-60">
-      <div class="flex flex-col items-center gap-y-40">
+      <div class="flex flex-col items-center gap-y-40" data-appear="hero">
         <x-headings.h1>
           Wir schaffen Platz für Neues.<br class="hidden sm:block">Und sichern, was bleibt.
         </x-headings.h1>
-        <x-icons.logo class="w-full h-auto mx-auto max-w-160 lg:max-w-185 2xl:max-w-210" />
+        <x-icons.logo class="w-full h-auto mx-auto max-w-160 lg:max-w-185 2xl:max-w-210" aria-label="Senn Tiefbau AG Logo" role="img" />
       </div>
     </x-layout.container>
   </div>

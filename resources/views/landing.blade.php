@@ -17,6 +17,8 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <meta name="apple-mobile-web-app-title" content="Senn Tiefbau" />
 <link rel="manifest" href="/site.webmanifest" />
+<link rel="preconnect" href="https://use.typekit.net" crossorigin />
+<link rel="stylesheet" href="https://use.typekit.net/uhw3wlz.css" />
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="antialiased font-sans font-medium text-sm lg:text-md text-granite leading-snug min-h-screen flex flex-col">

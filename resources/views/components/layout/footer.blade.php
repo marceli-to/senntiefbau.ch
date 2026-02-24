@@ -2,7 +2,7 @@
   <x-layout.container>
     <div class="flex flex-col gap-y-20 md:grid md:grid-cols-12 md:gap-y-0 md:gap-x-20">
       <div class="md:col-span-3">
-        <x-icons.logo class="w-full h-auto max-w-[12.5rem] lg:max-w-[13.75rem]" />
+        <x-icons.logo class="w-full h-auto max-w-[12.5rem] lg:max-w-[13.75rem]" aria-hidden="true" />
       </div>
       <div class="md:col-span-6">
         <address class="not-italic leading-[1.4]">
@@ -12,7 +12,7 @@
         </address>
       </div>
       <div class="md:col-span-3">
-        <nav class="leading-none">
+        <nav class="leading-none" aria-label="Rechtliches">
           <ul class="flex flex-col gap-y-5 lg:gap-y-10">
             <li>
               <a href="#">
