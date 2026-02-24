@@ -37,3 +37,13 @@
 p:not(:last-child) {
   @apply mb-20 lg:mb-30;
 }
+
+/* Prevent gallery FOUC: constrain slide widths before Swiper JS initializes */
+.swiper-gallery .swiper-slide {
+  max-width: 100%;
+}
+@media (min-width: 640px) {
+  .swiper-gallery .swiper-slide {
+    max-width: 25%;
+  }
+}

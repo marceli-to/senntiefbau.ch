@@ -23,6 +23,7 @@ new Swiper('.swiper-gallery', {
       centeredSlides: true,
     },
     1280: {
+      slidesPerView: 4,
       spaceBetween: 40,
       centeredSlides: true,
     },
