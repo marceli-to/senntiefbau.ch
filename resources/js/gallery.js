@@ -2,6 +2,7 @@ import Swiper from 'swiper';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
+document.addEventListener('DOMContentLoaded', () => {
 new Swiper('.swiper-gallery', {
   modules: [Autoplay],
   slidesPerView: 1,
@@ -28,4 +29,5 @@ new Swiper('.swiper-gallery', {
       centeredSlides: true,
     },
   },
+});
 });
