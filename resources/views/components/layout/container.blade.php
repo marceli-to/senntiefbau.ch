@@ -1,3 +1,4 @@
-<div {{ $attributes->merge(['class' => 'max-w-container mx-auto']) }}>
+@props(['width' => 'outer'])
+<div {{ $attributes->merge(['class' => 'max-w-' . $width . ' mx-auto']) }}>
   {{ $slot }}
 </div>
