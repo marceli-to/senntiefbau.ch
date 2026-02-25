@@ -62,7 +62,10 @@
       "Bash(git add public/img/senntiefbau-galerie-* resources/views/components/gallery.blade.php && git commit -m \"$\\(cat <<'EOF'\nSimplify gallery image numbering from 01-08 to 1-8\n\nRemove zero-padded filenames, drop str_pad from template.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\" && git status)",
       "Bash(git add public/img/senntiefbau-galerie-0* && git commit -m \"$\\(cat <<'EOF'\nRemove old zero-padded gallery image files\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\" && git status)",
       "Bash(git add -u public/img/ && git commit -m \"$\\(cat <<'EOF'\nRemove old zero-padded gallery image files\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\" && git status)",
-      "Bash(git push)"
+      "Bash(git push)",
+      "Bash(curl -sk https://senntiefbau.ch.test 2>/dev/null | grep -o 'https://[^\"]*build/assets/[^\"]*' | head -5)",
+      "Bash(php artisan config:show app | grep -i url)",
+      "Bash(ln -sfn /Users/marceli.to/Jamon.digital/Webroot/senntiefbau.ch/public \"/Users/marceli.to/Library/Application Support/Herd/config/valet/Sites/senntiefbau.ch\")"
     ]
   }
 }

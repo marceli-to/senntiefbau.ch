@@ -1,7 +1,7 @@
 <div class="relative pb-40 lg:pb-60">
   <div class="absolute inset-0 bg-sand h-[25%]"></div>
   <div class="absolute inset-0 bg-granite top-[25%]"></div>
-  <div class="px-20 sm:px-0" data-appear>
+  <div class="px-20 sm:px-0">
     <div class="swiper swiper-gallery" role="region" aria-label="Galerie" aria-roledescription="Karussell">
       <div class="swiper-wrapper">
         @foreach (range(1, 8) as $i)

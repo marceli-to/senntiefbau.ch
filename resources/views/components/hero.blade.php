@@ -16,8 +16,8 @@
   </picture>
 
   <div class="absolute inset-0 bg-black/30 flex items-end">
-    <x-layout.container class="w-full pb-60">
-      <div class="flex flex-col items-center gap-y-40" data-appear="hero">
+    <x-layout.container class="w-full pb-60 lg:pb-80 xl:pb-120">
+      <div class="flex flex-col items-center gap-y-40" data-appear="hero" data-appear-delay="150">
         <x-headings.h1>
           Wir schaffen Platz für Neues.<br class="hidden sm:block">Und sichern, was bleibt.
         </x-headings.h1>

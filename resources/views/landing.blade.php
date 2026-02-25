@@ -27,7 +27,6 @@
     <x-services />
     <x-about />
   </main>
-  <x-gallery />
   <x-layout.footer />
 </body>
 </html>

@@ -2,11 +2,11 @@
 
   <x-layout.container class="text-white">
 
-    <x-headings.h2 class="md:text-center" data-appear>
+    <x-headings.h2 class="md:text-center" data-appear  data-appear-delay="240">
       Arbeit im Tiefgang
     </x-headings.h2>
 
-    <p class="md:text-center max-w-prose mx-auto" data-appear data-appear-delay="80">
+    <p class="md:text-center max-w-prose mx-auto" data-appear data-appear-delay="320">
       Mit Erfahrung, Präzision und moderner Ausrüstung setzen wir Projekte im Tiefbau, Rückbau und Spezialbereich zuverlässig um. Wir realisieren Aushub-, Leitungs- und Abbrucharbeiten ebenso sorgfältig wie Umgebungs- und Wasserbauprojekte und bieten Lösungen, die auf jede Baustelle und jede Situation abgestimmt sind.<br>Dank handwerklichem Know-how und effizienter Arbeitsweise schaffen wir sichere Ergebnisse und echten Mehrwert für private wie gewerbliche Kunden.
     </p>
 
