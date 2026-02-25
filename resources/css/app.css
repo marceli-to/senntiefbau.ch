@@ -33,6 +33,9 @@
   --max-width-inner: 90rem;
 }
 
+ul:not(:last-child) {
+  @apply mb-20 lg:mb-30;
+}
 p:not(:last-child) {
   @apply mb-20 lg:mb-30;
 }
