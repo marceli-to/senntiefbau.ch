@@ -1,4 +1,4 @@
-<div class="bg-teal px-40 pt-30 pb-40 lg:pt-60 lg:pb-80">
+<div class="bg-teal px-40 pt-30 pb-40">
 
   <x-layout.container class="text-white">
 
@@ -7,7 +7,7 @@
     </x-headings.h2>
 
     <p class="md:text-center max-w-prose mx-auto" data-appear data-appear-delay="320">
-      Mit Erfahrung, Präzision und moderner Ausrüstung setzen wir Projekte im Tiefbau, Rückbau und Spezialbereich zuverlässig um. Wir realisieren Aushub-, Leitungs- und Abbrucharbeiten ebenso sorgfältig wie Umgebungs- und Wasserbauprojekte und bieten Lösungen, die auf jede Baustelle und jede Situation abgestimmt sind.<br>Dank handwerklichem Know-how und effizienter Arbeitsweise schaffen wir sichere Ergebnisse und echten Mehrwert für private wie gewerbliche Kunden.
+      Mit Erfahrung, Präzision und moderner Ausrüstung setzen wir Projekte im Tiefbau, Rückbau und Spezialbereich zuverlässig um. Wir realisieren Aushub-, Leitungs- und Abbrucharbeiten ebenso sorgfältig wie Umgebungs- und Wasserbauprojekte und bieten Lösungen, die auf jede Baustelle und jede Situation abgestimmt sind. Dank handwerklichem Know-how und effizienter Arbeitsweise schaffen wir sichere Ergebnisse und echten Mehrwert für private wie gewerbliche Kunden.
     </p>
 
     <div class="flex flex-col gap-y-65 md:grid md:grid-cols-2 xl:grid-cols-4 md:gap-x-40 md:gap-y-80 mt-90">

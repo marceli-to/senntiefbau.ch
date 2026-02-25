@@ -1,10 +1,14 @@
-<div  data-appear>
-  <x-gallery />
-  <footer class="bg-granite text-white text-xxs md:text-xs lg:text-sm px-40 pb-60">
+<div {{ $attributes->merge(['class' => '']) }} {{ request()->routeIs('landing') ? 'data-appear' : '' }}>
+  @if (request()->routeIs('landing'))
+    <x-gallery />
+  @endif
+  <footer class="bg-granite text-white text-xxs md:text-xs lg:text-sm px-40 pb-60 {{ !request()->routeIs('landing') ? 'pt-60' : '' }}">
     <x-layout.container>
       <div class="flex flex-col gap-y-20 md:grid md:grid-cols-12 md:gap-y-0 md:gap-x-20">
         <div class="md:col-span-3">
-          <x-icons.logo class="w-full h-auto max-w-[12.5rem] lg:max-w-[13.75rem]" aria-hidden="true" />
+          <a href="{{ route('landing') }}" aria-label="Zurück zur Startseite">
+            <x-icons.logo class="w-full h-auto max-w-[12.5rem] lg:max-w-[13.75rem]" aria-hidden="true" />
+          </a>
         </div>
         <div class="md:col-span-6">
           <address class="not-italic leading-[1.4]">
@@ -17,12 +21,12 @@
           <nav class="leading-none" aria-label="Rechtliches">
             <ul class="flex flex-col gap-y-5 lg:gap-y-10">
               <li>
-                <a href="#">
+                <a href="/impressum">
                   Impressum
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/datenschutz">
                   Datenschutz
                 </a>
               </li>

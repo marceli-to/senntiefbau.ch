@@ -27,7 +27,7 @@ class Deploy extends Command
             if (str_contains($content, 'https://senntiefbau.ch.test')) {
                 File::put(
                     $file->getPathname(),
-                    str_replace('https://senntiefbau.ch.test', 'https://senntiefbau.ch', $content)
+                    str_replace('https://senntiefbau.ch.test', 'https://senntiefbau.ch.stoz.ch', $content)
                 );
                 $count++;
             }

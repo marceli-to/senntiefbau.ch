@@ -8,8 +8,9 @@ new Swiper('.swiper-gallery', {
   slidesPerView: 1,
   spaceBetween: 20,
   loop: true,
+  speed: 2000,
   autoplay: {
-    delay: 3000,
+    delay: 2000,
     disableOnInteraction: false,
   },
   breakpoints: {

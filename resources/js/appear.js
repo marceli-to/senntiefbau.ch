@@ -16,7 +16,7 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         }
       });
     },
-    { threshold: 0.2 }
+    { threshold: 0.25 }
   );
 
   document.querySelectorAll('[data-appear]').forEach((el) => observer.observe(el));
