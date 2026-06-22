@@ -25,10 +25,18 @@ class Deploy extends Command
             $content = $file->getContents();
 
             if (str_contains($content, 'https://senntiefbau.ch.test')) {
-                File::put(
-                    $file->getPathname(),
-                    str_replace('https://senntiefbau.ch.test', 'https://senntiefbau.ch.stoz.ch', $content)
+                // Keep absolute production URLs for og: meta tags
+                $content = preg_replace(
+                    '/(property="og:[^"]*"\s+content=")https:\/\/senntiefbau\.ch\.test/',
+                    '$1https://senntiefbau.ch',
+                    $content
                 );
+
+                // Make all remaining URLs relative
+                $content = str_replace('https://senntiefbau.ch.test/', '/', $content);
+                $content = str_replace('https://senntiefbau.ch.test', '/', $content);
+
+                File::put($file->getPathname(), $content);
                 $count++;
             }
         }
